@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NABH-CORPORATION, expert en technologies de l'information : conception logicielle, maintenance, réseau, analyse de données et vente de produits informatiques.">
+    <title>NABH-CORPORATION | Technologies de l'Information</title>
+    <style>
+        /* Styles Généraux */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.25;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0a192f; /* Bleu nuit */
+            color: #ffffff;
+            padding: 20px 0;
+            border-bottom: 4px solid #ff6b00; /* Orange */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .logo h1 {
+            margin: 0;
+            display: inline-block;
+            color: #ffffff;
+        }
+        .logo span {
+            color: #ff6b00;
+        }
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        nav a:hover {
+            color: #ff6b00;
+        }
+
+        /* Section Hero avec Image de fond */
+        #hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        #hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        #hero p {
+            font-size: 20px;
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Sections Principales */
+        .main-section {
+            padding: 60px 0;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            color: #0a192f;
+            border-bottom: 2px solid #ff6b00;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Liste des Services */
+        .grid-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .grid-item {
+            background: #f9f9f9;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0a192f;
+            border-radius: 4px;
+        }
+        .grid-item h4 {
+            margin-top: 0;
+            color: #ff6b00;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Section Catalogue avec Images Réelles */
+        .product-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .product-content {
+            padding: 25px;
+        }
+        .product-content h4 {
+            margin-top: 0;
+            color: #0a192f;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .product-meta {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 15px;
+        }
+        .product-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff6b00;
+            margin-bottom: 15px;
+        }
+
+        /* Formulaire */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #0a192f;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .btn-submit {
+            background-color: #ff6b00;
+            color: #ffffff;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .btn-submit:hover {
+            background-color: #e05e00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a192f;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 4px solid #ff6b00;
+        }
+        footer p {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NABH-<span>CORPORATION</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#catalogue">Catalogue</a></li>
+                    <li><a href="#a-propos">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Solutions Technologiques Sur Mesure</h2>
+            <p>Conception logicielle, maintenance, réseaux, analyse de données et équipements informatiques professionnels de haute performance.</p>
+        </div>
+    </section>
+
+    <section id="accueil" class="main-section">
+        <div class="container">
+            <h2 class="section-title">Bienvenue chez NABH-CORPORATION</h2>
+            <p>Entreprise spécialisée dans les technologies de l'information, NABH-CORPORATION propose une offre globale alliant des prestations de services experts et la vente de produits informatiques de haute qualité. Notre infrastructure moderne garantit une sécurité optimale, une vitesse de chargement ultra-rapide et une stabilité totale.</p>
+        </div>
+    </section>
+
+    <section id="services" class="main-section">
+        <div class="container">
+            <h2 class="section-title">Nos 8 Domaines de Prestations</h2>
+            <ul class="grid-list">
+                <li class="grid-item">
+                    <h4>1. Conception de logiciels</h4>
+                    <p>Développement d'applications sur mesure : solutions web, natives et mobiles adaptées à vos besoins métiers.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>2. Maintenance informatique</h4>
+                    <p>Suivi, assistance technique, dépannage et optimisation continue de vos parcs informatiques.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>3. Réseau informatique et télécoms</h4>
+                    <p>Architecture, déploiement, sécurisation et gestion des infrastructures de communication.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>4. Analyse des données</h4>
+                    <p>Traitement, valorisation et modélisation de vos données pour guider vos prises de décisions stratégiques.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>5. Infographie</h4>
+                    <p>Création de designs visuels, identités graphiques et supports de communication professionnels.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>6. Vidéo surveillances</h4>
+                    <p>Installation, configuration et maintenance de systèmes de sécurité et de surveillance vidéo.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>7. Formations</h4>
+                    <p>Programmes de montée en compétences techniques sur les outils, langages et technologies du secteur informatique.</p>
+                </li>
+                <li class="grid-item">
+                    <h4>8. Vente de produits informatiques</h4>
+                    <p>Fourniture de matériels robustes, d'équipements de serveurs et d'accessoires informatiques indispensables.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="catalogue" class="main-section">
+        <div class="container">
+            <h2 class="section-title">Notre Catalogue de Produits</h2>
+            <p style="margin-bottom: 30px;">Explorez notre sélection de matériels et d'équipements professionnels. Pour toute demande de prix ou de commande, utilisez les références indiquées dans notre formulaire de contact.</p>
+            
+            <div class="product-flex">
+                <div class="product-card">
+                    <img class="product-image" src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80" alt="Laptop Professionnel PC-ST-08" loading="lazy">
+                    <div class="product-content">
+                        <h4>Laptop Pro Diagnostic — PC-ST-08</h4>
+                        <p class="product-meta"><strong>Référence :</strong> NABH-PC-08 | <strong>Disponibilité :</strong> En stock</p>
+                        <p>Ordinateur portable haute performance configuré pour le développement informatique, les analyses réseaux avancées et les diagnostics de systèmes.</p>
+                        <div class="product-price">125000 fcfa</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Serveur Rack Orion" loading="lazy">
+                    <div class="product-content">
+                        <h4>Station de Travail & Serveur Data 'Orion'</h4>
+                        <p class="product-meta"><strong>Référence :</strong> NABH-SRV-12 | <strong>Disponibilité :</strong> Sur commande</p>
+                        <p>Serveur rack professionnel conçu pour la gestion lourde de bases de données, l'hébergement cloud d'entreprise et les architectures de calcul intensif.</p>
+                        <div class="product-price">450000 fcfa</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" alt="Système Caméra Vidéosurveillance" loading="lazy">
+                    <div class="product-content">
+                        <h4>Caméra Système IP Haute Définition — CAM-VS-05</h4>
+                        <p class="product-meta"><strong>Référence :</strong> NABH-CAM-05 | <strong>Disponibilité :</strong> En stock</p>
+                        <p>Équipement de vidéosurveillance professionnel avec vision nocturne infrarouge et flux sécurisé pour la protection des locaux commerciaux et industriels.</p>
+                        <div class="product-price">32000 fcfa</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=800&q=80" alt="Accessoires Informatiques Hub" loading="lazy">
+                    <div class="product-content">
+                        <h4>Accessoires IT & Hubs Multi-ports Connect</h4>
+                        <p class="product-meta"><strong>Référence :</strong> NABH-ACC-12 | <strong>Disponibilité :</strong> En stock</p>
+                        <p>Sélection complète de connectiques professionnelles, hubs USB-C en aluminium, câbles certifiés catégorie 6, et adaptateurs réseaux.</p>
+                        <div class="product-price">Prix sur demande</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="a-propos" class="main-section">
+        <div class="container">
+            <h2 class="section-title">À Propos de Nous</h2>
+            <p><strong>Histoire & Valeurs :</strong> Fondée sur l'exigence technique et l'innovation, NABH-CORPORATION accompagne la transformation numérique des entreprises grâce à des architectures logicielles fiables et des infrastructures réseaux sécurisées.</p>
+            <p><strong>Notre Équipe :</strong> Composée d'ingénieurs et de techniciens spécialisés, notre équipe met son expertise au service de la performance et de la pérennité de vos outils informatiques.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="main-section">
+        <div class="container">
+            <h2 class="section-title">Contact & Demande de Devis</h2>
+            <p style="margin-bottom: 25px;">Un projet ? Une commande ? Remplissez ce formulaire pour recevoir une réponse rapide de nos équipes.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom / Entreprise *</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom ou le nom de votre entreprise">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse Électronique *</label>
+                    <input type="email" id="email" name="email" required placeholder="exemple@domaine.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+242 ...">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Objet de la demande *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Sélectionnez une option --</option>
+                        <option value="devis">Demande de devis</option>
+                        <option value="produit">Information produit / Catalogue</option>
+                        <option value="partenariat">Partenariat</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou indiquez les références des produits souhaités (ex: NABH-PC-08)..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NABH-CORPORATION. Tous droits réservés.</p>
+            <p>Mentions Légales | Conformité RGPD | Conditions Générales de Vente (CGV)</p>
+            <p>Site Statique Hautes Performances — Document Confidentiel</p>
+        </div>
+    </footer>
+
+</body>
+</html>
